@@ -1,0 +1,17 @@
+{
+    "contents" : "math.sqrt<-function(x)\n{\n  return(sqrt(x))\n}\n\nmath.log<-function(x)\n{\n  return(log(x))\n}\n\nmath.log10<-function(x)\n{\n  return(log10(x))\n}\n\nmath.log<-function(x)\n{\n  return(log2(x))\n}\n\nmath.exp<-function(x)\n{\n  return(exp(x))\n}\n\n\n",
+    "created" : 1420907191730.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3134763366",
+    "id" : "5D32666D",
+    "lastKnownWriteTime" : 1420907663,
+    "path" : "~/Desktop/R/Civil Health/pythonR/R/root_algorithm.R",
+    "project_path" : "R/root_algorithm.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "a.shape<-function(x)\n{\n  return(dim(x))\n}\n\na.size<-function(x)\n{\n  return(prod(dim(x))\n}\n\na.nbytes<-function(x)\n{\n  return(object.size(x))\n}\n\n",
+    "created" : 1421344228290.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1000950344",
+    "id" : "3C1D371F",
+    "lastKnownWriteTime" : 1421350472,
+    "path" : "~/Desktop/R/Civil Health/pythonR/R/equivalents.R",
+    "project_path" : "R/equivalents.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "logical_and<-function(x,y)\n{\n  return(x && y)\n}\n\nlogical_or<-function(x,y)\n{\n  return(x | y)\n}\n\nlogical_xor<-function(x,y)\n{\n  return(xor(x,y))\n}\n\nlogical_not<-function(x)\n{\n  return(!a)\n}\n\n\n\n",
+    "created" : 1420906978187.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4240984223",
+    "id" : "D1F14A4E",
+    "lastKnownWriteTime" : 1420907189,
+    "path" : "~/Desktop/R/Civil Health/pythonR/R/logical.R",
+    "project_path" : "R/logical.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

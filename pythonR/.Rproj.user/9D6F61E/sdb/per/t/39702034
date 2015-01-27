@@ -1,0 +1,17 @@
+{
+    "contents" : "multiply<-function(x,y)\n{\n  return(x*y)\n}\n\nmatrixmultiply<-function(x,y)\n{\n  return(x%*%y)\n}\n\nkron<-function(x,y)\n{\n  return(kronecker(x,y)\n}\n\nlinalg.solve<-function(x,y)\n{\n  return(solve(x,y))\n}\n\n\n\n\n",
+    "created" : 1421350106402.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2693661110",
+    "id" : "39702034",
+    "lastKnownWriteTime" : 1421350452,
+    "path" : "~/Desktop/R/Civil Health/pythonR/R/matrix.R",
+    "project_path" : "R/matrix.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

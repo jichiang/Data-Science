@@ -1,0 +1,17 @@
+{
+    "contents" : "less<-function(x,y)\n{return(x < y)\n}\n\ngreater <-function(x,y)\n{return(x > y)\n}\n\nless_equal<-function(x,y)\n{return(x <= y)\n}\n\n\ngreater_equal<-function(x,y)\n{return(x >= y)\n}\n\nnot_equal<-function(x,y)\n{\n  return(x != y)\n}\n\nequal<-function(x,y)\n{\n  return(x = y)\n}\n\n\n",
+    "created" : 1420906388582.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1527775405",
+    "id" : "E774AB99",
+    "lastKnownWriteTime" : 1420906991,
+    "path" : "~/Desktop/R/Civil Health/pythonR/R/relational.R",
+    "project_path" : "R/relational.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
