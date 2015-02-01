@@ -1,0 +1,146 @@
+rm(list=ls())
+
+
+
+library(mvtnorm)
+
+
+
+set.seed(135297)
+
+
+
+# set a totsamp value, which could be different than
+
+# the number of rows of the data file
+
+
+
+totsamp <- 1000
+
+
+
+N <- 1000
+
+
+
+sigma <- 1  # assumed known in this problem
+
+
+
+# read the data that was created in the R code "makedataregression1.rpl"
+
+
+
+regression1.pre <- read.table("c:/temp/regressiondata1.txt")
+
+
+
+# use only the number of rows as specified by "totsamp"
+
+
+
+regression1 <- regression1.pre[1:totsamp,]
+
+
+
+beta <- matrix(NA,nrow=N,ncol=ncol((regression1)-1))
+
+
+
+
+
+#######
+
+
+
+# simulate distributions of betas, based on the
+
+# simulation data of regression
+
+# these betas are simulated using multivariate regression
+
+# the mean and variances of the betas are based on
+
+# the maximum likelihood estimators (MLEs) of the 
+
+# betas (see notes for references for these values)
+
+
+
+# the x matrix is in columns 2:6, the y values are in
+
+# column 1
+
+
+
+# here, "t" is for transpose of a vector or matrix
+
+# here, "solve" calculates the inverse of a matrix
+
+
+
+x <- as.matrix(regression1[1:totsamp,2:6])
+
+y <- as.matrix(regression1[1:totsamp,1])
+
+beta.mean <- solve(t(x)%*%x)%*%(t(x)%*%y)
+
+beta.var <- sigma* solve(t(x)%*%x)
+
+
+
+# simulate the beta values from a multivariate normal density
+
+
+
+beta <- rmvnorm(n=N,mean=beta.mean,beta.var)
+
+
+
+
+
+#######
+
+
+
+
+
+# mean and quantiles
+
+
+
+mean(beta[,1])
+
+quantile(beta[,1],c(0.025,.5,.975))
+
+
+
+
+
+##########
+
+
+
+
+
+
+
+
+
+# need to edit this subdirectory
+
+
+
+pdf(file = "c:/temp/beta1.pdf")
+
+
+
+par(mfrow=c(1,1)) # has one column, one row of plots on a page
+
+hist(beta[,1],nclass=20)
+
+
+
+graphics.off()  # closes plot without quitting out of R
+
