@@ -1,0 +1,49 @@
+#http://bioinformatics.knowledgeblog.org/2011/06/20/analysing-microarray-data-in-bioconductor/
+
+
+> # download the BioC installation routines
+source("http://bioconductor.org/biocLite.R")
+#install the core packages
+ biocLite()
+#install the GEO libraries
+biocLite("GEOquery")
+biocLite("affy")
+biocLite("oligo")
+biocLite("limma")
+
+
+#http://www.tm4.org/normalizing.html
+
+
+
+setwd("/Users/JChiang/Desktop/OPERATION URBAN/CivilHealthSystems/dengue/GSE51808_RAW") 
+
+#At the prompt, install BiocLite by copy-pasting the code below(includes the Affy packages needed for normalization):
+
+source("http://bioconductor.org/biocLite.R")
+biocLite() 
+
+#Load Affy package for normalization:
+  
+library(affy) 
+
+
+  
+Data<-ReadAffy()
+eset<-rma(Data) 
+
+#Write a tab-delimited file of the normalized data.
+
+write.exprs(eset, file="dengue_wholeblood.txt", sep="\t") 
+
+#Optional: QC Plots and Analysis
+
+#Install and load the made4 package:
+  
+biocLite("made4")
+library(made4) 
+
+#Get a quick overview of the data: hierarchical clustering dendrogram, boxplot, histogram.
+
+overview(eset) 
+
