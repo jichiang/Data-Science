@@ -1,0 +1,142 @@
+
+```{r}
+
+
+
+set.seed(213)
+x <- rnorm(20,50,4)
+e <- rnorm(20, 0, 10)
+f <- rnorm(20, 0, 40)
+g <- rnorm(20, 0, 40)
+
+y.1 <- 430.5 + -5.9 * x + e
+y.2 <- 450  + -5.0 * x + f
+y.3 <- 470 + -5.8 * x + g
+y.4 <- 490 + -5.8 * x + f
+y.5 <- 510 + -5.9 * x + e
+y.6 <- 530.5 + -5.9 * x + g
+y.7 <- 550  + -5.0 * x + f
+y.8 <- 570 + -5.8 * x + g
+y.9 <- 590 + -5.8 * x + f
+y.10 <- 610 + -5.9 * x + g
+
+
+
+
+
+job1<-cbind(x,y.1)
+job2<-cbind(x,y.2)
+job3<-cbind(x,y.3)
+job4<-cbind(x,y.4)
+job5<-cbind(x,y.5)
+job6<-cbind(x,y.6)
+job7<-cbind(x,y.7)
+job8<-cbind(x,y.8)
+job9<-cbind(x,y.9)
+job10<-cbind(x,y.10)
+
+
+
+library(ggplot2)
+
+job1<-as.data.frame(job1)
+job2<-as.data.frame(job2)
+job3<-as.data.frame(job3)
+job4<-as.data.frame(job4)
+job5<-as.data.frame(job5)
+job6<-as.data.frame(job6)
+job7<-as.data.frame(job7)
+job8<-as.data.frame(job8)
+job9<-as.data.frame(job9)
+job10<-as.data.frame(job10)
+
+#the dollar sign assigns the variable, 
+job1$x<-job1$x-10
+job2$x<-job2$x-5
+job3$x<-job3$x-3
+job4$x<-job4$x-1
+job5$x<-job5$x
+job6$x<-job6$x+1
+job7$x<-job7$x+3
+job8$x<-job8$x+6
+job9$x<-job9$x+10
+job10$x<-job10$x+13
+
+
+
+colnames(job1)[2]<-"y"
+colnames(job2)[2]<-"y"
+colnames(job3)[2]<-"y"
+colnames(job4)[2]<-"y"
+colnames(job5)[2]<-"y"
+colnames(job6)[2]<-"y"
+colnames(job7)[2]<-"y"
+colnames(job8)[2]<-"y"
+colnames(job9)[2]<-"y"
+colnames(job10)[2]<-"y"
+
+job<-"job"
+job1[3]<-job
+job2[3]<-job
+job3[3]<-job
+job4[3]<-job
+job5[3]<-job
+job6[3]<-job
+job7[3]<-job
+job8[3]<-job
+job9[3]<-job
+job10[3]<-job
+
+job<-rep.int("job1",20)
+job.1<-cbind(job1,job)
+
+job<-rep.int("job2",20)
+job.2<-cbind(job2,job)
+
+job<-rep.int("job3",20)
+job.3<-cbind(job3,job)
+
+
+job<-rep.int("job4",20)
+job.4<-cbind(job4,job)
+
+
+job<-rep.int("job5",20)
+job.5<-cbind(job5,job)
+
+
+job<-rep.int("job6",20)
+job.6<-cbind(job6,job)
+
+
+job<-rep.int("job7",20)
+job.7<-cbind(job7,job)
+
+
+job<-rep.int("job8",20)
+job.8<-cbind(job8,job)
+
+
+job<-rep.int("job9",20)
+job.9<-cbind(job9,job)
+
+
+job<-rep.int("job10",20)
+job.10<-cbind(job10,job)
+
+
+
+
+jobs.1<-rbind(job.1,job.2,job.3,job.4,job.5,job.6,job.7,job.8,job.9,job.10)
+
+jobs.1<-as.data.frame(jobs.1)
+
+p.1<-qplot(x,y,data=jobs.1)
+p.1+scale_x_continuous(limits=c(20, 90))+scale_y_continuous(limits=c(0, 700))
+
+p.2<-qplot(x, y, data=jobs.1, colour=job)
+p.2+scale_x_continuous(limits=c(20, 90))+scale_y_continuous(limits=c(0, 700))
+
+
+```
+
